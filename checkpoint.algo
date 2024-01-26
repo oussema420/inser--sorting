@@ -1,0 +1,16 @@
+ALGORITHM algorithm_name
+VAR
+  i =INTEGER
+  j =INTEGER
+  ARRAY := [2, 4, 1, 9, 3, 7]
+BEGIN
+FOR i FROM 1 TO length(ARRAY) STEP 1  DO
+    key = ARRAY[i]
+    j = i-1
+    WHILE (j>=0 and ARRAY[j]> key) DO
+        ARRAY[j+1]= ARRAY[j]
+        j= j-1
+    END_WHILE
+    ARRAY[j+1] = key
+END_FOR
+END
